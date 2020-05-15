@@ -1,84 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Press+Start+2P&family=Source+Code+Pro&display=swap');
 
-/* soft css reset */
-*{
-  box-sizing: border-box;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  /* background: #4499ff; */
-  background-image: url('../img/fundo.jpg');
+body {
+  /* background-image: url('../img/fundo.jpg'); */
+  background: #54c3fa;
   background-size: auto 100vh;
-  font-family: Arial;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
 }
 
-@media(min-width: 400px){
-  body{
+@media (min-width: 400px) {
+  body {
     font-size: 18px;
   }
 }
 
-header{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+@media (min-width: 600px) {
+  body {
+    font-size: 22px;
+  }
 }
 
-.menu{
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu {
   background-color: white;
   position: fixed;
   top: 0;
   width: 100vw;
 }
 
-.menu ul{
+.menu ul {
   display: flex;
   justify-content: space-around;
 }
 
-.menu li{
+.menu li {
   list-style: none;
 }
 
-.menu a{
+.menu a {
+  color: #54c3fa;
   display: block;
-  padding: 10px 20px;
-}
-
-a{
-  color: teal;
+  font-weight: bold;
+  padding: 10px;
   text-decoration: none;
 }
 
-a:hover{
-  text-decoration: underline;
-}
-
-.site-title,
-.site-subtitle{
-  color: whitesmoke;
+.site-title {
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  font-size: 4em;
+  line-height: 1em;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.site-title{
-  font-size: 4em;
-  font-family: 'Gloria Hallelujah', cursive;
-}
-
-.site-subtitle{
+.site-subtitle {
+  color: white;
   font-style: italic;
-  font-family: 'Press Start 2P', cursive;
-  line-height: 1.8em;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 2em;
 }
 
-.portifolio h2{
-  font-family: 'Press Start 2P', cursive;
+.contato,
+.portfolio {
+  padding: 1em;
 }
 
-.img-portfolio{
-  width: 180px;
+.contato h2,
+.portfolio h2 {
+  color: white;
+  font-family: 'Carter One', cursive;
+  font-size: 2.2em;
+  margin-bottom: .5em;
+}
+
+ .grid {
+  color: white;
+  display: grid;
+  gap: 1em;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 400px) {
+  .contato,
+  .portfolio {
+    padding: 3em 2em 2em;
+    height: 100vh;
+  }
+
+   .grid {
+    grid-template-columns: 200px 200px;
+    height: calc(100vh - 4.5em - 75px);
+  }
+}
+
+@media (min-width: 940px) {
+  .contato,
+  .portfolio {
+    padding: 2em;
+  }
+
+   .grid {
+    grid-template-columns: repeat(4, 200px);
+    height: calc(100vh - 8em - 75px);
+  }
+}
+
+.portfolio figcaption {
+  font-weight: bold;
+}
+
+.img-portfolio {
+  border-radius: 10px;
   height: 180px;
+  object-fit: cover;
+  width: 180px;
+}
+
+.icons a {
+  color: white;
+  font-size: 6em;
 }
