@@ -77,7 +77,8 @@ header {
 
 .contato,
 .portfolio {
-  padding: 1em;
+  padding: 2em;
+  min-height: 100vh;
 }
 
 .contato h2,
