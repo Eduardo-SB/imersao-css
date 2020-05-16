@@ -59,27 +59,28 @@ header {
   text-decoration: none;
   /* transition: 0.5s; */
   transition: tex-shadow, color 1s;
-  
+
 }
 
 .menu a:active,
-.menu a:hover{
+.menu a:hover {
   color: #000;
-  text-shadow: 0px 0px 10px #000000 ;
+  text-shadow: 0px 0px 10px #000000;
 }
 
-.titulo{
+.titulo {
   transform: scale(0.2) translateY(50vh);
   opacity: 0;
   animation: linear 2s animacaoTitulo forwards;
 }
 
-@keyframes animacaoTitulo{
-  from{
+@keyframes animacaoTitulo {
+  from {
     transform: scale(0.2) translateY(50vh);
     opacity: 0;
   }
-  to{
+
+  to {
     transform: scale(1) translateY(0);
     opacity: 1;
   }
@@ -102,12 +103,22 @@ header {
   font-size: 2em;
 }
 
+.sobre,
 .contato,
 .portfolio {
   padding: 2em;
   min-height: 100vh;
 }
 
+@media(min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sobre h2,
 .contato h2,
 .portfolio h2 {
   color: white;
@@ -116,7 +127,28 @@ header {
   margin-bottom: .5em;
 }
 
- .grid {
+.sobre p {
+  color: white;
+  margin-bottom: 1.4em;
+  text-indent: 1.4em;
+  text-align: justify;
+}
+
+.sobre a{
+  color: #000;
+  text-decoration: none;
+}
+
+.sobre .avatar{
+  float: right;
+  margin-left: 2em;
+}
+
+.sobre .avatar img{
+  clip-path: circle();  
+}
+
+.grid {
   color: white;
   display: grid;
   gap: 1em;
@@ -126,25 +158,27 @@ header {
 }
 
 @media (min-width: 400px) {
+
   .contato,
   .portfolio {
     padding: 3em 2em 2em;
     height: 100vh;
   }
 
-   .grid {
+  .grid {
     grid-template-columns: 200px 200px;
     height: calc(100vh - 4.5em - 75px);
   }
 }
 
 @media (min-width: 940px) {
+
   .contato,
   .portfolio {
     padding: 2em;
   }
 
-   .grid {
+  .grid {
     grid-template-columns: repeat(4, 200px);
     height: calc(100vh - 8em - 75px);
   }
@@ -163,7 +197,7 @@ header {
   width: 180px;
 }
 
-.img-portfolio:hover{
+.img-portfolio:hover {
   transform: scale(1.2) rotate(-2deg);
 }
 
@@ -172,13 +206,13 @@ header {
   font-size: 6em;
 }
 
-.contato a{
+.contato a {
   color: white;
   font-size: 6em;
   transition: text-shadow 1s;
 }
 
 .contato a:active,
-.contato a:hover{
-  text-shadow: 0px 0px 10px #000000 ;
+.contato a:hover {
+  text-shadow: 0px 0px 10px #000000;
 }
